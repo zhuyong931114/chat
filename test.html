@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layPage快速使用</title>
+  <link rel="stylesheet" href="layui/css/layui.css" media="all">
+  <style>
+	html,body{
+		height:100%;
+	}
+  </style>
+</head>
+<body>
+	<div id="test" style="height:100%;width:100%;position:relative;">
+		<div id="test" style="height:50px;width:100%;background:#ff0;">
+		
+		</div>
+		<div id="test" style="width:100%;background:#f00;    position: absolute;
+    top: 50px;
+    bottom: 0px;
+    left: 0px;">
+		
+		</div>
+	</div>
+ 
+<script src="layui/layui.js"></script>
+<script>
+layui.use('laypage', function(){
+  var laypage = layui.laypage;
+  
+  //执行一个laypage实例
+  laypage.render({
+    elem: 'test1',
+    count: 50,
+	groups:0,
+	theme:'#eeeeee',
+	layout:['first','prev', 'next','last']
+  });
+});
+</script>
+</body>
+</html>
